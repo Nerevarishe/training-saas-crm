@@ -1,0 +1,73 @@
+@mixin base-font {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+@mixin base-medium-font {
+  @include base-font;
+  font-weight: 500;
+}
+
+@mixin semibold-13-font {
+  @include base-font;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+@mixin regular-10-font {
+  @include base-font;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+@mixin regular-12-font {
+  @include base-font;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin regular-13-font {
+  @include base-font;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+@mixin medium-11-font {
+  @include base-medium-font;
+  font-size: 11px;
+  line-height: 16px;
+}
+@mixin medium-12-font {
+  @include base-medium-font;
+  font-size: 12px;
+  line-height: 18px;
+}
+@mixin medium-13-font {
+  @include base-medium-font;
+  font-size: 13px;
+  line-height: 19px;
+}
+@mixin medium-14-font {
+  @include base-medium-font;
+  font-size: 14px;
+  line-height: 21px;
+}
+@mixin medium-15-font {
+  @include base-medium-font;
+  font-size: 15px;
+  line-height: 22px;
+}
+@mixin medium-18-font {
+  @include base-medium-font;
+  font-size: 18px;
+  line-height: 27px;
+}
+@mixin medium-20-font {
+  @include base-medium-font;
+  font-size: 20px;
+  line-height: 30px;
+}

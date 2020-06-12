@@ -1,13 +1,16 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
 const plumber = require("gulp-plumber");
 
 function compileSass(done) {
   gulp
     .src("./src/assets/scss/styles.scss")
-    // .pipe(plumber())
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./src/assets/css"))
     .pipe(browserSync.stream());
   done();
