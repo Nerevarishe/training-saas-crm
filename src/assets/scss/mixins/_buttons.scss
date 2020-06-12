@@ -1,0 +1,74 @@
+@import "../fonts/fonts";
+@import "../vars";
+
+@mixin button {
+  @include semibold-13-font;
+  border-radius: $button-border-radius;
+}
+
+@mixin accent-button {
+  @include button;
+  //padding: 11px 14px;
+  box-shadow: 0px 2px 6px rgba(9, 142, 223, 0.3);
+  background: $accent-blue-color;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background: $button-hover-color;
+    box-shadow: 0px 8px 16px rgba(52, 175, 249, 0.2);
+  }
+
+  &:active {
+    background: $button-active-color;
+    box-shadow: 0px 2px 6px rgba(9, 142, 223, 0.3);
+  }
+
+  &:disabled {
+    background: $icon-gray-color;
+  }
+}
+
+@mixin secondary-button {
+  @include button;
+  border: 1px solid $accent-blue-color;
+  //padding: 11px 14px;
+  color: $accent-blue-color;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $button-hover-color;
+    color: $button-hover-color;
+  }
+
+  &:active {
+    border: 1px solid $button-active-color;
+    color: $button-active-color;
+  }
+
+  &:disabled {
+    border: 1px solid $icon-gray-color;
+    color: $icon-gray-color;
+  }
+}
+
+@mixin tertiary-button {
+  @include button;
+  border-radius: unset;
+  //padding: 11px 14px;
+  color: $accent-blue-color;
+
+  &:hover,
+  &:focus {
+    color: $button-hover-color;
+  }
+
+  &:active {
+    color: $button-active-color;
+  }
+
+  &:disabled {
+    color: $accent-button-color;
+    opacity: 0.4;
+  }
+}
