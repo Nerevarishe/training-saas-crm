@@ -1,10 +1,15 @@
 @import "./vars";
 .header {
+  position: absolute;
+  background: $white-color;
+  z-index: 100;
+
   &__global-search {
-    position: absolute;
+    position: fixed;
     left: 256px;
     width: calc(100vw - 256px);
     padding: 20px 36px;
+    background: $white-color;
   }
 
   &__searchfield {

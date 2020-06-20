@@ -1,0 +1,17 @@
+.main {
+  position: absolute;
+  width: calc(100% - 256px);
+  height: 100%;
+  margin-top: 60px;
+  margin-left: 256px;
+  padding: 36px 38px 36px 36px;
+  background: $main-bg-color;
+  z-index: 50;
+
+  &__tasks {
+    width: 635px;
+    height: 718px;
+    padding: 16px 24px 14px 24px;
+    background: $white-color;
+  }
+}
