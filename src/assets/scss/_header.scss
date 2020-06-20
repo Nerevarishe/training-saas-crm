@@ -1,5 +1,41 @@
 @import "./vars";
 .header {
+  &__global-search {
+    position: absolute;
+    left: 256px;
+    width: calc(100vw - 256px);
+    padding: 20px 36px;
+  }
+
+  &__searchfield {
+    height: 20px;
+    border: none;
+    padding-left: 32px;
+    background: url("../img/svg/searchbar/search.svg") no-repeat;
+    @include regular-12-font;
+
+    &::placeholder {
+      color: $gray-color;
+    }
+  }
+
+  &__notification {
+    position: absolute;
+    right: 36px;
+    top: 18px;
+  }
+
+  &__notification-dot {
+    display: none;
+    position: absolute;
+    right: -2px;
+    top: 0;
+
+    &_show {
+      display: block;
+    }
+  }
+
   &__sidebar {
     min-width: 256px;
     height: 100vh;
