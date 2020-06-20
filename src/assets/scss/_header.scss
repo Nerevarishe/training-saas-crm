@@ -1,3 +1,118 @@
+@import "./vars";
 .header {
-  //&__
+  &__sidebar {
+    min-width: 256px;
+    height: 100vh;
+    position: fixed;
+    margin: 0;
+    padding: 17px 24px 22px 24px;
+    background: $white-color;
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+  }
+
+  &__title {
+    margin-bottom: 42px;
+  }
+
+  &__title-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: $accent-blue-color;
+  }
+
+  &__divider {
+    height: 1px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background: $divider-color;
+    margin-bottom: 24px;
+  }
+
+  &__user {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+
+  &__username-text {
+    @include medium-14-font;
+    color: $black-color;
+  }
+
+  &__email-text {
+    @include medium-11-font;
+    color: $gray-color;
+  }
+
+  &__sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__sidebar-item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: 49px;
+    }
+  }
+
+  &__sidebar-link-icon {
+    margin-right: 14px;
+    vertical-align: middle;
+  }
+
+  &__sidebar-link {
+    @include medium-13-font;
+    text-decoration: none;
+    color: $dark-blue-color;
+
+    &_active {
+      color: $accent-blue-color;
+    }
+
+    &:hover {
+      color: $accent-blue-color;
+    }
+  }
+
+  &__sidebar-divider {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    //top: 60px;
+    background: $divider-color;
+    margin-bottom: 24px;
+  }
+
+  //&__toggle-wrapper {
+  //  position: absolute;
+  //}
+
+  &__toggle {
+    position: absolute;
+    left: 27px;
+    bottom: 22px;
+  }
+
+  &__toggle-icon {
+    vertical-align: middle;
+  }
+
+  &__toggle-text {
+    @include medium-11-font;
+    color: $gray-color;
+  }
 }
