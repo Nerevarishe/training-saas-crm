@@ -9,9 +9,21 @@
   z-index: 50;
 
   &__tasks {
+    position: absolute;
     width: 635px;
     height: 718px;
     padding: 16px 24px 14px 24px;
     background: $white-color;
+  }
+
+  &__tasks-compleated-text {
+    @include medium-13-font;
+    color: $dark-blue-color;
+  }
+
+  &__tasks-period-list {
+    position: relative;
+    right: 0;
+    top: 0;
   }
 }
