@@ -3,7 +3,11 @@
 
 @mixin button {
   @include semibold-13-font;
+  border: none;
   border-radius: $button-border-radius;
+  background: none;
+  outline-style: none;
+  cursor: pointer;
 }
 
 @mixin accent-button {
@@ -68,7 +72,7 @@
   }
 
   &:disabled {
-    color: $accent-button-color;
+    color: $accent-blue-color;
     opacity: 0.4;
   }
 }

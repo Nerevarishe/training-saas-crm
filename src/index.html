@@ -196,9 +196,9 @@
           <!-- /#.main__tasks-period-list-select -->
         </div>
         <!-- /.main__tasks-period-list -->
-        <div class="main__tasks-progres">
+        <div class="main__tasks-progress">
           <progress
-            class="main__tasks-progresbar"
+            class="main__tasks-progressbar"
             max="10"
             value="8"
           ></progress>
@@ -211,15 +211,19 @@
           <ul class="main__tasks-week-list">
             <li class="main__tasks-week-items">
               <span class="main__tasks-week-day">Sun</span>
-              <!-- /.main__tasks-week-day --><span class="main__tasks-week-date"
+              <!-- /.main__tasks-week-day -->
+              <span class="main__tasks-week-date main__tasks-week-date_selected"
                 >23</span
               >
               <!-- /.main__tasks-week-date -->
             </li>
             <!-- /.main__tasks-week-items -->
             <li class="main__tasks-week-items">
-              <span class="main__tasks-week-day">Mon</span>
-              <!-- /.main__tasks-week-day --><span class="main__tasks-week-date"
+              <span class="main__tasks-week-day main__tasks-week-day_today"
+                >Mon</span
+              >
+              <!-- /.main__tasks-week-day -->
+              <span class="main__tasks-week-date main__tasks-week-date_today"
                 >24</span
               >
               <!-- /.main__tasks-week-date -->
@@ -228,40 +232,36 @@
             <li class="main__tasks-week-items">
               <span class="main__tasks-week-day">Tue</span>
               <!-- /.main__tasks-week-day --><span class="main__tasks-week-date"
-                >25</span
-              >
+                >25
+              </span>
               <!-- /.main__tasks-week-date -->
             </li>
             <!-- /.main__tasks-week-items -->
             <li class="main__tasks-week-items">
               <span class="main__tasks-week-day">Wed</span>
-              <!-- /.main__tasks-week-day --><span class="main__tasks-week-date"
-                >26</span
-              >
+              <!-- /.main__tasks-week-day -->
+              <span class="main__tasks-week-date">26</span>
               <!-- /.main__tasks-week-date -->
             </li>
             <!-- /.main__tasks-week-items -->
             <li class="main__tasks-week-items">
               <span class="main__tasks-week-day">Thu</span>
-              <!-- /.main__tasks-week-day --><span class="main__tasks-week-date"
-                >27</span
-              >
+              <!-- /.main__tasks-week-day -->
+              <span class="main__tasks-week-date">27</span>
               <!-- /.main__tasks-week-date -->
             </li>
             <!-- /.main__tasks-week-items -->
             <li class="main__tasks-week-items">
               <span class="main__tasks-week-day">Fri</span>
-              <!-- /.main__tasks-week-day --><span class="main__tasks-week-date"
-                >28</span
-              >
+              <!-- /.main__tasks-week-day -->
+              <span class="main__tasks-week-date">28</span>
               <!-- /.main__tasks-week-date -->
             </li>
             <!-- /.main__tasks-week-items -->
             <li class="main__tasks-week-items">
               <span class="main__tasks-week-day">Sat</span>
-              <!-- /.main__tasks-week-day --><span class="main__tasks-week-date"
-                >29</span
-              >
+              <!-- /.main__tasks-week-day -->
+              <span class="main__tasks-week-date">29</span>
               <!-- /.main__tasks-week-date -->
             </li>
             <!-- /.main__tasks-week-items -->
@@ -298,34 +298,163 @@
           </div>
           <!-- /.main__tasks-card-person -->
           <div class="main__tasks-card-edit-block">
-            <img
-              src="./assets/img/svg/tasks-card/Ellipse.svg"
-              alt="circle1"
-              class=""
-            />
-            <img
-              src="./assets/img/svg/tasks-card/Ellipse-1.svg"
-              alt="circle2"
-              class=""
-            />
-            <img
-              src="./assets/img/svg/tasks-card/edit.svg"
-              alt="Edit Task"
-              class=""
-            />
-            <img
-              src="./assets/img/svg/tasks-card/delete.svg"
-              alt="Delete Task"
-              class=""
-            />
+            <div class="main__tasks-card-edit-block-circles">
+              <img
+                src="./assets/img/svg/tasks-card/Ellipse.svg"
+                alt="circle1"
+                class="main__tasks-card-edit-block-circle-yellow"
+              />
+              <img
+                src="./assets/img/svg/tasks-card/Ellipse-1.svg"
+                alt="circle2"
+                class="main__tasks-card-edit-block-circle-green"
+              />
+            </div>
+            <!-- /.main__tasks-card-edit-block-circles -->
+            <div class="main__tasks-card-edit-block-edit-delete">
+              <img
+                src="./assets/img/svg/tasks-card/edit.svg"
+                alt="Edit Task"
+                class="main__tasks-card-edit-block-edit"
+              />
+              <img
+                src="./assets/img/svg/tasks-card/delete.svg"
+                alt="Delete Task"
+                class="main__tasks-card-edit-block-delete"
+              />
+            </div>
+            <!-- /.main__tasks-card-edit-block-edit-delete -->
           </div>
           <!-- /.main__tasks-card-edit-block -->
-          <span class="main__tasks-card-status">Completed</span>
+          <span
+            class="main__tasks-card-status main__tasks-card-status_completed"
+            >Completed</span
+          >
           <!-- /.main__tasks-card-status -->
         </div>
         <!-- /.main__tasks-card -->
-        <span class="main__tasks-show-more-text"></span>
-        <!-- /.main__tasks-show-more-text -->
+        <div class="main__tasks-card">
+          <span class="main__tasks-card-type">Call</span>
+          <!-- /.main__tasks-card-type -->
+          <span class="main__tasks-card-task">Invite to office meet-up</span>
+          <!-- /.main__tasks-card-task -->
+          <div class="main__tasks-card-due-date">
+            <span class="main__tasks-card-due-date-text">Due date: </span>
+            <!-- /.main__tasks-card-due-date-text -->
+            <span class="main__tasks-card-due-date-date"
+              >December 23, 2018</span
+            >
+            <!-- /.main__tasks-card-due-date-date -->
+          </div>
+          <!-- /.main__tasks-card-due-date -->
+          <div class="main__tasks-card-person">
+            <img
+              src="./assets/img/associated_photo_rebeca.png"
+              alt="George Fields"
+              class="main__tasks-card-person-avatar"
+            />
+            <span class="main__tasks-card-person-name">Rebecca Moore</span>
+            <!-- /.main__tasks-card-person-name -->
+          </div>
+          <!-- /.main__tasks-card-person -->
+          <div class="main__tasks-card-edit-block">
+            <div class="main__tasks-card-edit-block-circles">
+              <img
+                src="./assets/img/svg/tasks-card/Ellipse.svg"
+                alt="circle1"
+                class="main__tasks-card-edit-block-circle-yellow"
+              />
+              <img
+                src="./assets/img/svg/tasks-card/Ellipse-1.svg"
+                alt="circle2"
+                class="main__tasks-card-edit-block-circle-green"
+              />
+            </div>
+            <!-- /.main__tasks-card-edit-block-circles -->
+            <div class="main__tasks-card-edit-block-edit-delete">
+              <img
+                src="./assets/img/svg/tasks-card/edit.svg"
+                alt="Edit Task"
+                class="main__tasks-card-edit-block-edit"
+              />
+              <img
+                src="./assets/img/svg/tasks-card/delete.svg"
+                alt="Delete Task"
+                class="main__tasks-card-edit-block-delete"
+              />
+            </div>
+            <!-- /.main__tasks-card-edit-block-edit-delete -->
+          </div>
+          <!-- /.main__tasks-card-edit-block -->
+          <span class="main__tasks-card-status main__tasks-card-status_ended"
+            >Ended</span
+          >
+          <!-- /.main__tasks-card-status -->
+        </div>
+        <!-- /.main__tasks-card -->
+        <div class="main__tasks-card">
+          <span class="main__tasks-card-type">Event</span>
+          <!-- /.main__tasks-card-type -->
+          <span class="main__tasks-card-task">Office meet-up</span>
+          <!-- /.main__tasks-card-task -->
+          <div class="main__tasks-card-due-date">
+            <span class="main__tasks-card-due-date-text">Due date: </span>
+            <!-- /.main__tasks-card-due-date-text -->
+            <span class="main__tasks-card-due-date-date"
+            >December 23, 2018</span
+            >
+            <!-- /.main__tasks-card-due-date-date -->
+          </div>
+          <!-- /.main__tasks-card-due-date -->
+          <div class="main__tasks-card-person">
+            <img
+                    src="./assets/img/associated_photo_lindsey.png"
+                    alt="George Fields"
+                    class="main__tasks-card-person-avatar"
+            />
+            <span class="main__tasks-card-person-name">Lindsey Stroud</span>
+            <!-- /.main__tasks-card-person-name -->
+          </div>
+          <!-- /.main__tasks-card-person -->
+          <div class="main__tasks-card-edit-block">
+            <div class="main__tasks-card-edit-block-circles">
+              <img
+                      src="./assets/img/svg/tasks-card/Ellipse.svg"
+                      alt="circle1"
+                      class="main__tasks-card-edit-block-circle-yellow"
+              />
+              <img
+                      src="./assets/img/svg/tasks-card/Ellipse-1.svg"
+                      alt="circle2"
+                      class="main__tasks-card-edit-block-circle-green"
+              />
+            </div>
+            <!-- /.main__tasks-card-edit-block-circles -->
+            <div class="main__tasks-card-edit-block-edit-delete">
+              <img
+                      src="./assets/img/svg/tasks-card/edit.svg"
+                      alt="Edit Task"
+                      class="main__tasks-card-edit-block-edit"
+              />
+              <img
+                      src="./assets/img/svg/tasks-card/delete.svg"
+                      alt="Delete Task"
+                      class="main__tasks-card-edit-block-delete"
+              />
+            </div>
+            <!-- /.main__tasks-card-edit-block-edit-delete -->
+          </div>
+          <!-- /.main__tasks-card-edit-block -->
+          <span class="main__tasks-card-status main__tasks-card-status_completed"
+          >Ended</span
+          >
+          <!-- /.main__tasks-card-status -->
+        </div>
+        <!-- /.main__tasks-card -->
+        <div class="main__tasks-show-more">
+          <button class="main__tasks-show-more-btn">Show more</button>
+          <!-- /.main__tasks-show-more-text --></div>
+        <!-- /.main__tasks-show-more -->
       </div>
       <!-- main__tasks -->
     </main>

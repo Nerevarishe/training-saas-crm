@@ -1,0 +1,19 @@
+@mixin tasks-status {
+  min-width: 84px;
+  padding: 3px 8px 5px 8px;
+  border-radius: 4px;
+  @include medium-11-font;
+  text-align: center;
+  color: $white-color;
+  &_completed {
+    background: $green-color;
+  }
+
+  &_ended {
+    background: $red-color;
+  }
+
+  &_active {
+    background: $yellow-color;
+  }
+}
