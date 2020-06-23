@@ -3,6 +3,7 @@ const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
 const plumber = require("gulp-plumber");
+const autoprefixer = require("gulp-autoprefixer");
 
 function compileSass(done) {
   gulp
@@ -10,6 +11,10 @@ function compileSass(done) {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 20 versions'],
+      cascade: true
+    }))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./src/assets/css"))
     .pipe(browserSync.stream());
