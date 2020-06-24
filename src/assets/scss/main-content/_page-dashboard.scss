@@ -1,17 +1,14 @@
 .main {
-  position: absolute;
-  width: calc(100% - 256px);
-  height: 100%;
-  margin-top: 60px;
-  margin-left: 256px;
-  padding: 36px 38px 36px 36px;
+  display: flex;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 96px 38px 36px 292px;
   background: $main-bg-color;
-  z-index: 50;
 
   &__tasks {
     position: relative;
-    max-width: 635px;
-    //height: 718px;
+    min-width: 635px;
+    margin-right: 30px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     padding: 16px 24px 14px 24px;
@@ -35,34 +32,50 @@
     color: $gray-blue-color;
   }
 
+  // TODO make from select element mixin
   &__tasks-period-list-select {
-    // TODO: Add arrow to select element!
+    width: 110px;
     border: none;
     appearance: none;
     @include regular-12-font;
     color: $accent-blue-color;
+    background: url("../img/select-arrow-down.svg") no-repeat right center;
+    background-size: 7px 4px;
 
     &:focus {
       outline-style: none;
     }
-
-    &::after {
-      background: url("../img/select-arrow-down.svg") no-repeat right top;
-    }
   }
 
   &__tasks-progress {
-    //width: 100%;
+    width: 100%;
     margin-bottom: 20px;
     padding-top: 16px;
-    border-radius: 3px;
   }
 
+  // TODO: make from progressbar mixin
   &__tasks-progressbar {
     width: 100%;
     height: 4px;
-
+    border: none;
+    border-radius: 3px;
     background: $divider-color;
+  }
+
+  &__tasks-progressbar::-webkit-progress-bar {
+    width: 100%;
+    height: 4px;
+    border: none;
+    border-radius: 3px;
+    background: $divider-color;
+  }
+  &__tasks-progressbar::-webkit-progress-value {
+    border-radius: 3px;
+    background: $green-color;
+  }
+  &__tasks-progressbar::-moz-progress-bar {
+    border-radius: 3px;
+    background: $green-color;
   }
 
   &__tasks-selected-date-text {
@@ -182,9 +195,6 @@
     color: $dark-gray-color;
   }
 
-  &__tasks-card-person {
-  }
-
   &__tasks-card-person-avatar {
     max-width: 24px;
     max-height: 24px;
@@ -232,5 +242,58 @@
 
   &__tasks-show-more-btn {
     @include tertiary-button;
+  }
+
+  &__deals {
+    position: relative;
+    min-width: 445px;
+    max-height: 344px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 16px 24px;
+    background: $white-color;
+    border-radius: 4px;
+  }
+
+  &__deals-text {
+    @include medium-15-font;
+    color: $black-color;
+  }
+
+  &__deals-filter {
+    position: absolute;
+    right: 35px;
+    top: 19px;
+  }
+
+  &__deals-filter-text {
+    @include regular-12-font;
+    color: $gray-blue-color;
+  }
+
+  &__deals-filter-select {
+    width: 75px;
+    border: none;
+    appearance: none;
+    @include regular-12-font;
+    color: $accent-blue-color;
+    background: url("../img/select-arrow-down.svg") no-repeat right center;
+    background-size: 7px 4px;
+
+    &:focus {
+      outline-style: none;
+    }
+  }
+
+  &__deals-divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 54px;
+    height: 1px;
+    background: $divider-color;
+  }
+
+  &__deals-chart {
+    margin-top: 33px;
   }
 }
